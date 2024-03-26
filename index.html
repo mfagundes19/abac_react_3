@@ -1,0 +1,58 @@
+
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="app.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    </head>
+    <body>
+        <div id="app">
+            <div class="container">
+                <form name="formulario" id="formulario" action="/" method="POST">
+                    <div style="float: left; width: 100%; margin-top: 10px;">
+                        <label>Nome Completo:</label><br>
+                        <input type="text" name="fullname" id="fullname" style="border: solid 1px #CDCDCD; border-radius: 5px; padding: 5px; width: 100%; margin-top: 8px;" required>
+                    </div>
+                    <div style="float: left; width: 100%; margin-top: 10px;">
+                        <label>Sexo:</label>
+                        <label>Masculino</label>
+                        <input type="radio" name="gender" id="gender_m" value="Masculino" required>
+                        <label>Feminino</label>
+                        <input type="radio" name="gender" id="gender_f" value="Feminino" required>
+                    </div>
+                    <div style="float: left; width: 100%; margin-top: 10px;">
+                        <label>Desejo receber informativos:</label>
+                        <input type="checkbox" name="newsletter" id="newsletter">
+                    </div>
+                    <div style="float: left; width: 100%; margin-top: 10px;">
+                        <label>Tipo de Contato:</label><br>
+                        <select name="contact_type" id="contact_type" style="border: solid 1px #CDCDCD; border-radius: 5px; padding: 5px; width: 100%; margin-top: 8px;" required>
+                            <option></option>
+                            <option value="comercial">Comercial</option>
+                            <option value="contato">Contato</option>
+                        </select>
+                    </div>
+                    <div style="float: left; width: 100%; margin-top: 10px;">
+                        <label>Mensagem:</label><br>
+                        <textarea rows="4" name="message" id="message" style="border: solid 1px #CDCDCD; border-radius: 5px; padding: 5px; width: 100%; margin-top: 8px;">
+                        </textarea>
+                    </div>
+                    <textarea rows="4" name="json_data" id="json_data" style="display: none;"></textarea>
+                    <div style="float: left; width: 100%; margin-top: 10px;">
+                        <button type="submit" id="btnEnviar" style="background: #4DA6FF; border: solid 1px #FFFFFF; border-radius: 5px; padding: 10px; width: 100%; margin-top: 8px; cursor: pointer; color: #FFFFFF;">
+                            Enviar
+                        </button>
+                        <br><br>
+                    </div>
+                </form>
+                <div id="container_item">
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script src="app.js"></script>
+</html>
+
